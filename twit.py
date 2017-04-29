@@ -13,8 +13,9 @@ api = tweepy.API(auth)
 
 f = open('curses.txt')
 curses = f.readlines()
-curse = random.choice(curses)
 
-print curse
-api.update_status(curse)
-#time.sleep(24*60*60)
+while True:
+    curse = random.choice(curses)
+    print curse
+    #api.update_status(curse)
+    time.sleep(random.randint(12*60*60, 24*60*60))
